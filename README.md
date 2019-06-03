@@ -13,18 +13,18 @@ This is a project to develop an open, libre standalone radio.
 ### Displays
 
 * 2.7" eInk Display
- * Low Power + Visible in Sunlight
- * Slow refresh rate
+** Low Power + Visible in Sunlight
+** Slow refresh rate
 * 5" TFT Display (optional)
- * Higher power, not visible in sunlight
- * Fast refresh rate
+** Higher power, not visible in sunlight
+** Fast refresh rate
 
 ### Audio
 
 * 2 TRRS Jacks
- * Pin reconfigurable to support different setups (?)
+** Pin reconfigurable to support different setups (?)
 * 1 RJ45 Jack
- * Pin Reconfigurable to support different setups (?)
+** Pin Reconfigurable to support different setups (?)
 
 ### Digital
 
@@ -40,20 +40,20 @@ This is a project to develop an open, libre standalone radio.
 ### Knobs
 
 * 1 Dual-Spindle Knobs w/ detentes
- * Radio Primary Function / Radio Secondary Function
+** Radio Primary Function / Radio Secondary Function
 * 2 Dual-Spindle Knob w/ detentes w/ push button
- * System Primary Function / System Secondary Function / Select
- * Radio Tertiary Function / Tune / Scan
+** System Primary Function / System Secondary Function / Select
+** Radio Tertiary Function / Tune / Scan
 * 1 Dual-Spindle Knob w/o detentes
- * Audio Gain (Volume) / Squelch
+** Audio Gain (Volume) / Squelch
 
 ## Back panel
 
 * Antenna 
- * 3? (SMA or PL259)? connectors
+** 3? (SMA or PL259)? connectors
 * Digital
- * USB 3 Micro-B
- * Ethernet
+** USB 3 Micro-B
+** Ethernet
 
 ## Radio Modes
 
@@ -70,49 +70,49 @@ marked † are anticipated in the inital release.
 
 #### Modes
 * Voice (Primary)
- * AM (Secondary)
-  * Step Size (Tertiary) †
- * USB
-  * Step Size †
- * LSB
-  * Step Size †
- * FM
-  * Step Size †
+** AM (Secondary)
+*** Step Size (Tertiary) †
+** USB
+*** Step Size †
+** LSB
+*** Step Size †
+** FM
+*** Step Size †
 * Digital Voice
- * FreeDV †
-  * ?
+** FreeDV †
+*** ?
 * Digital
- * MFSK
-  * FSK441
-  * JT6M
-  * JT65
-  * FT8 †
-  * Olivia MFSK
- * AX25
-  * APRS
- * PSK
-  * PSK31 †
-  * QPSK31
-  * PSK63
-  * QPSK63
- * FSK
-  * 45.45 / 170Hz †
+** MFSK
+*** FSK441
+*** JT6M
+*** JT65
+*** FT8 †
+*** Olivia MFSK
+** AX25
+*** APRS
+** PSK
+*** PSK31 †
+*** QPSK31
+*** PSK63
+*** QPSK63
+** FSK
+*** 45.45 / 170Hz †
 
 ## System Modes
 
 * USB
- * Enable MTP
- * Enable DFU
- * Enable UAC
+** Enable MTP
+** Enable DFU
+** Enable UAC
 * Write Raw Data to USB device
- * IQ Data (WAV format, stereo L=I R=Q)
- * Audio Data (WAV format, stereo L=Rx R=Tx)
+** IQ Data (WAV format, stereo L=I R=Q)
+** Audio Data (WAV format, stereo L=Rx R=Tx)
 * Ethernet
- * DHCP/Static (IP/Subnet)
- * Stream IQ (multicast/destination:port)
- * Stream Audio (multicast/destination:port)
- * Enable API
- * Enable SSH
+** DHCP/Static (IP/Subnet)
+** Stream IQ (multicast/destination:port)
+** Stream Audio (multicast/destination:port)
+** Enable API
+** Enable SSH
 
 ## Notes
 
