@@ -67,16 +67,23 @@ inputs and blocks available.
 * /etc/slr/modes/settings/ - contains the last settings for each mode
 * /etc/slr/ui/ - contains the state of the UI
 * /etc/slr/memory/ - contains a file per memory slot
-* /home/slr/.ssh/authorized\_keys - ssh authorized keys
-* /usr/share/gnuradio/grc/blocks/ - blocks available to gnu radio
 * /usr/local/bin/slr/system-menu/ - Applications to run when selected by the system menu
 * /etc/slr/system-menu/ - contains the state of the system menu items; filenames same as the application
 
+Along with the normal place to place config files for certain applications or the kernel, e.g.
+
+* /home/slr/.ssh/authorized\_keys - ssh authorized keys
+* /etc/network/interfaces - network interface configruation
+* /usr/share/gnuradio/grc/blocks/ - blocks available to gnu radio
+
 ### Control API
 
-All items relative to `/dev/slr/`.
 
-Service management is done through the init system and `inittab`
+Service management is done through the init system and `inittab`. This
+probably needs to be thought over a little more? There may already be a 
+device class that can handle this.
+
+These should appear in the `/sys/class/` filesystem.
 
 * radios - All available radios
 * radios/\<number\> - specific radio (radios may expose additional settings as
@@ -86,36 +93,18 @@ Service management is done through the init system and `inittab`
 * radios/\<number\>/gain - gain setting for the radio in dB
 * radios/\<number\>/frequency - frequency the radio is set to, in Hz
 * radios/\<number\>/step - scanning step size, in Hz
-* radios/\<number\>/ranges - frequncy ranges this radio can tune to
+* radios/\<number\>/ranges - frequency ranges this radio can tune to
 * radios/\<number\>/ranges/\<number\> - specific range
 * radios/\<number\>/ranges/\<number\>/min - minimal extent of range in Hz, inclusive
 * radios/\<number\>/ranges/\<number\>/max - maximal extent of range in Hz, inclusive
+
+These should appear in the `/dev/` filesystem
+
 * radios/\<number\>/iq - raw IQ data
-* nic - All available NICs
-* nic/\<number\> - specific NIC
-* nic/\<number\>/ipv4 - IPv4 settings
-* nic/\<number\>/ipv4/address - IPv4 address
-* nic/\<number\>/ipv4/subnet - IPv4 subnet
-* nic/\<number\>/ipv6 - IPv6 settings
-* nic/\<number\>/ipv6/address - IPv6 address
-* nic/\<number\>/ipv6/prefixlen- IPv6 prefix length
-* nic/\<number\>/mac - MAC address
-* inputs - Inputs
-* inputs/selected\_radio - currently selected radio
-* inputs/\<number\> - Specific input
-* inputs/\<number\>/value - Value of the input
-* inputs/\<number\>/name - name of the input
-* inputs/\<number\>/type - type of input
-* sound - sound control
-* sound/volume - global volume
-* sound/\<number\> - specific device
-* sound/\<number\>/type - type of sound device
-* sound/\<number\>/volume - volume
-* sound/\<number\>/enabled - enabled
 
 #### Standard Inputs
 
-Events sent to `/dev/input/slr` with an input type of `EV_KEY` (except for volume, which uses `EV_ABS`) and an
+Inputs should appear as a keyboard with an input type of `EV_KEY` (except for volume, which uses `EV_ABS`) and an
 event code from `input-event-codes.h`.
 
 | Description           | Event Code                         |
@@ -136,15 +125,6 @@ If there are multiple radios, the following is also required.
 | --------------------- | ----------              |
 | Switch Radio          | KEY\_FORWARD, KEY\_BACK |
 
-
-The audo subsystem also announces events into it's own device (/dev/input/snd/\<number\>) with inputs types of `EV_SW`
-
-| Description           | Event Code                         | Event Value                         |
-| --------------------- | ---------------------------------- | -----------                         |
-| Push-to-Talk          | SW\_RFKILL\_ALL                    | set when not transmitting           |
-| Headphone Inserted    | SW\_HEADPHONE\_INSERT              | set when headphones are plugged in  |
-| Micropone Inserted    | SW\_MICROPHONE\_INSERT             | set when a microphone is plugged in |
-
 #### Optional Inputs
 
 | Description           | Event Code
@@ -152,6 +132,10 @@ The audo subsystem also announces events into it's own device (/dev/input/snd/\<
 | 4x4 Numpad            | KEY\_NUMERIC\_0-9\*#ABCD           |
 | Function              | KEY\_LEFTSHIFT                     |
 | Memory                | KEY\_MEMO                          |
+
+#### Sound
+
+Sound is controlled via ALSA.
 
 
 ## _The Crossing Watchman_ Mobile Radio
