@@ -140,10 +140,10 @@ marked † are anticipated in the inital release.
 
 * Digital Radio Modes can use the TFT screen + USB keyboard for IO or
   appear as a (separate) serial terminal over USB
-* Appears as a serial terminal over USB for control
+* Appears as a serial terminal over USB for control, data, and system, logs terminals
 * Device appears as a Device Firmware Upgrade Class USB device for software updates
 * Device appears as a Media Transfer Protocol Class USB device for configuration
 * Device can be controlled over Ethernet via a REST-like protocol
 * Device can stream I/Q data, decoded audio, or decoded data over the network or USB
 * Device can act as a USB sound card (UAC 1.0)
-* Device can act as an SSH server (`data` and `control` as the ssh command bring up those respective shells)
+* Device can act as an SSH server (`data`, `control`, `system`, 'logs' as the ssh command bring up those respective shells)
