@@ -29,9 +29,11 @@ SDR driver.
 * 2.7" eInk Display
   * Low Power + Visible in Sunlight
   * Slow refresh rate
+  * Used to display slow-changing information: frequency, settings, modes
 * 5" TFT Display (optional)
   * Higher power, not visible in sunlight
   * Fast refresh rate
+  * Used to show fast-updating information waterfalls or spectrums.
 
 ### Audio
 
@@ -127,6 +129,12 @@ marked † are anticipated in the inital release.
   * Stream Audio (multicast/destination:port)
   * Enable API
   * Enable SSH
+* TFT Display
+  * Enable Radio Waterfall
+  * Enable Audio Spectrum
+  * Enable Audio Waterfall
+* Attenuation
+  * Amount
 
 ## Notes
 
