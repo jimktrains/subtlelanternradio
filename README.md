@@ -138,8 +138,10 @@ marked † are anticipated in the inital release.
   * Enable Radio Waterfall
   * Enable Audio Spectrum
   * Enable Audio Waterfall
+  * Show last image (e.g. for RadioFax and SSTV modes)
 * Attenuation
   * Amount
+* Front TRRS and RJ45 Configuration
 
 ## Notes
 
