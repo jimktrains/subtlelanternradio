@@ -4,6 +4,20 @@ Showing the way forward.
 
 This is a project to develop an open, libre standalone radio. 
 
+
+## Internal Configuration
+
+### Radio
+
+For the first revision, a commercial SDR (e.g. HackRF or LimeSDR) will be
+used as the transceiver.
+
+### System-on-a-Chip
+
+For the first revision, a commercial System-on-a-Chip supporting Linux
+(e.g. Raspberry-Pi or ODROID) will run the control software, GNU Radio, and 
+SDR driver.
+
 ## Front Panel
 
 ### Horrible Sketch
