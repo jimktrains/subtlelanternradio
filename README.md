@@ -38,11 +38,9 @@ SDR driver.
 
 ### Displays
 
-* 2-2.7" eInk Display
+* ~3.5" Transflective Display
   * Low Power + Visible in Sunlight
-  * Slow refresh rate
-  * First used to display slow-changing information: frequency, settings, modes
-  * Second used to display data from digital modes
+  * Fast Refresh
 
 ### Audio
 
@@ -81,11 +79,11 @@ SDR driver.
 
 ### Configurable
 
-* Potentially just gnuradio files in folders? `$MENU/<top level>/<second level>/<3rd level>.grc`
+* Potentially just gnuradio files in folders? `$MENU/<mode>.grc`
 
 ### Extendible
 
-* Modes should be programs that can be loaded into gnuradio.
+* Modes should be flows that can be loaded into gnuradio.
 
 #### Radio Modes
 
@@ -110,6 +108,8 @@ SDR driver.
   * Enable SSH
   * Load SSH authorized\_keys from USB drive
 * Attenuation
+  * Amount
+* Power Output
   * Amount
 
 ## Notes

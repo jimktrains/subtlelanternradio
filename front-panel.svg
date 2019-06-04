@@ -81,19 +81,12 @@
        cy="254.60051"
        r="8.598958" />
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.2758162;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.3661392;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4567"
-       width="50.006248"
-       height="23.043156"
-       x="20.372917"
-       y="223.42143" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect4569"
-       width="50.006248"
-       height="26.19375"
-       x="20.372917"
-       y="246.46458" />
+       width="49.915924"
+       height="40.679916"
+       x="20.418079"
+       y="223.4666" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path4573"
@@ -502,25 +495,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="36.777084"
-       y="236.14583"
+       x="29.104168"
+       y="237.46875"
        id="text4831"><tspan
          sodipodi:role="line"
          id="tspan4829"
-         x="36.777084"
-         y="236.14583"
-         style="stroke-width:0.26458332px">eInk Screen</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="27.516666"
-       y="259.16458"
-       id="text4835"><tspan
-         sodipodi:role="line"
-         id="tspan4833"
-         x="27.516666"
-         y="259.16458"
-         style="stroke-width:0.26458332px">eInk Screen</tspan></text>
+         x="29.104168"
+         y="237.46875"
+         style="stroke-width:0.26458332px">Transflective display</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
