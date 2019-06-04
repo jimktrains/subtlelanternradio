@@ -6,6 +6,9 @@ This is a project to develop an open, libre standalone radio.
 
 Initially a desktop model, but eventually a portable/HT model as well.
 
+The desktop model is made being designed with batter-powered operation in
+mind.
+
 
 ## Internal Configuration
 
