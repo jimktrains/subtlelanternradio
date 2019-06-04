@@ -4,6 +4,8 @@ Showing the way forward.
 
 This is a project to develop an open, libre standalone radio. 
 
+Initially a desktop model, but eventually a portable/HT model as well.
+
 
 ## Internal Configuration
 
