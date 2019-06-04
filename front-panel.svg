@@ -64,10 +64,22 @@
        r="8.598958" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3718"
+       cx="9.3927078"
+       cy="233.89687"
+       r="3.5718749" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3716-3"
        cx="10.054167"
        cy="256.25415"
        r="8.598958" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3718-6"
+       cx="9.7895832"
+       cy="256.51874"
+       r="3.5718751" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3716-7"
@@ -76,17 +88,30 @@
        r="8.598958" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3718-5"
+       cx="80.499481"
+       cy="232.24323"
+       r="3.5718751" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3716-3-3"
        cx="81.160934"
        cy="254.60051"
        r="8.598958" />
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.3661392;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.16110869;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4567"
-       width="49.915924"
-       height="40.679916"
-       x="20.418079"
-       y="223.4666" />
+       width="26.826389"
+       height="14.655558"
+       x="31.698263"
+       y="228.42119" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4569"
+       width="50.006248"
+       height="26.19375"
+       x="20.372917"
+       y="246.46458" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path4573"
@@ -99,6 +124,13 @@
        cx="5.8208356"
        cy="291.44376"
        r="1.7197917" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4595"
+       width="4.4979167"
+       height="4.4979167"
+       x="14.552083"
+       y="288.79791" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4600"
@@ -225,6 +257,20 @@
        height="6.0854168"
        x="117.4751"
        y="247.25824" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4699"
+       width="11.1125"
+       height="3.96875"
+       x="133.34999"
+       y="225.5625" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4704"
+       width="1.0583333"
+       height="6.8791666"
+       x="138.37708"
+       y="220.53542" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -235,7 +281,7 @@
          id="tspan4706"
          x="1.8520833"
          y="246.2"
-         style="stroke-width:0.26458332px">Mode/Step</tspan></text>
+         style="stroke-width:0.26458332px">R1/R2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -246,18 +292,18 @@
          id="tspan4710"
          x="2.6458333"
          y="269.48334"
-         style="stroke-width:0.26458332px">Volume</tspan></text>
+         style="stroke-width:0.26458332px">AG/Sq</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="72.495827"
+       x="69.849991"
        y="243.55417"
        id="text4716"><tspan
          sodipodi:role="line"
          id="tspan4714"
-         x="72.495827"
+         x="69.849991"
          y="243.55417"
-         style="stroke-width:0.26458332px">Tune/Scan</tspan></text>
+         style="stroke-width:0.26458332px">Tune/R3/Scan</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -268,7 +314,7 @@
          x="73.289581"
          y="267.36667"
          style="stroke-width:0.26458332px"
-         id="tspan4825">System/Select</tspan></text>
+         id="tspan4825">S1/Select</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -394,13 +440,13 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="93.199486"
-       y="252.21924"
+       y="253.80672"
        id="text4768"><tspan
          sodipodi:role="line"
          id="tspan4766"
          x="93.199486"
-         y="252.21924"
-         style="stroke-width:0.26458332px">*/./E</tspan></text>
+         y="253.80672"
+         style="stroke-width:0.26458332px">*</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -416,13 +462,13 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="109.40525"
-       y="251.35927"
+       y="253.47591"
        id="text4776"><tspan
          sodipodi:role="line"
          id="tspan4774"
          x="109.40525"
-         y="251.35927"
-         style="font-size:2.11666656px;stroke-width:0.26458332px">#/Ret/F</tspan></text>
+         y="253.47591"
+         style="stroke-width:0.26458332px">#</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -456,53 +502,75 @@
          x="117.4751"
          y="253.34366"
          style="stroke-width:0.26458332px">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="123.39514"
+       y="232.34239"
+       id="text4811"><tspan
+         sodipodi:role="line"
+         id="tspan4809"
+         x="123.39514"
+         y="232.34239"
+         style="stroke-width:0.26458332px">  Numeric/DTFM</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4813"
        width="6.0854168"
        height="6.0854168"
-       x="135.20209"
-       y="225.82709" />
+       x="133.08542"
+       y="235.61667" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="131.49791"
-       y="235.88126"
+       x="129.38124"
+       y="245.67084"
        id="text4817"><tspan
          sodipodi:role="line"
          id="tspan4815"
-         x="131.49791"
-         y="235.88126"
+         x="129.38124"
+         y="245.67084"
          style="stroke-width:0.26458332px">Function</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4819"
        width="6.614583"
        height="5.5562501"
-       x="134.9375"
-       y="239.32083" />
+       x="132.82083"
+       y="249.11041" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="131.23334"
-       y="250.43335"
+       x="129.11667"
+       y="260.22293"
        id="text4823"><tspan
          sodipodi:role="line"
          id="tspan4821"
-         x="131.23334"
-         y="250.43335"
+         x="129.11667"
+         y="260.22293"
          style="stroke-width:0.26458332px">Memory</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="29.104168"
-       y="237.46875"
+       x="36.777084"
+       y="236.14583"
        id="text4831"><tspan
          sodipodi:role="line"
          id="tspan4829"
-         x="29.104168"
-         y="237.46875"
-         style="stroke-width:0.26458332px">Transflective display</tspan></text>
+         x="36.777084"
+         y="236.14583"
+         style="stroke-width:0.26458332px">eInk Screen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="27.516666"
+       y="259.16458"
+       id="text4835"><tspan
+         sodipodi:role="line"
+         id="tspan4833"
+         x="27.516666"
+         y="259.16458"
+         style="stroke-width:0.26458332px">TFT Screen</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -510,10 +578,10 @@
        y="295.41251"
        id="text4839"><tspan
          sodipodi:role="line"
+         id="tspan4837"
          x="39.422916"
          y="295.41251"
-         style="stroke-width:0.26458332px"
-         id="tspan129">USB A</tspan></text>
+         style="stroke-width:0.26458332px">USB 3 A</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -524,23 +592,23 @@
          id="tspan4841"
          x="1.8520832"
          y="295.41251"
-         style="stroke-width:0.26458332px">⅛&quot; TRS</tspan></text>
-    <circle
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path3716-3-36"
-       cx="82.285416"
-       cy="279.38177"
-       r="8.598958" />
+         style="stroke-width:0.26458332px">⅛&quot; TRRS</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.30729175px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="74.877083"
-       y="292.61096"
-       id="text4712-7"><tspan
+       style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="14.552083"
+       y="288.79791"
+       id="text4847"><tspan
          sodipodi:role="line"
-         id="tspan4710-5"
-         x="74.877083"
-         y="292.61096"
-         style="stroke-width:0.26458332px">Squelch</tspan></text>
+         id="tspan4845"
+         x="14.552083"
+         y="288.79791"
+         style="stroke-width:0.26458332px">RJ45</tspan></text>
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3718-5-3"
+       cx="81.227081"
+       cy="255.19583"
+       r="3.5718753" />
   </g>
 </svg>
