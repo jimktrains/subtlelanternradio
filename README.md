@@ -182,8 +182,8 @@ SDR driver.
 
 ### Audio
 
-* 1 ⅛" Headphone Jack
-* 1 ⅛" Microphone Jack
+* ⅛" Headphone Jack
+* ⅛" Microphone Jack
 
 ### Digital
 
