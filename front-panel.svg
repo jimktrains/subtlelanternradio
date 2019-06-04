@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -64,22 +64,10 @@
        r="8.598958" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path3718"
-       cx="9.3927078"
-       cy="233.89687"
-       r="3.5718749" />
-    <circle
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3716-3"
        cx="10.054167"
        cy="256.25415"
        r="8.598958" />
-    <circle
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path3718-6"
-       cx="9.7895832"
-       cy="256.51874"
-       r="3.5718751" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3716-7"
@@ -88,23 +76,17 @@
        r="8.598958" />
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path3718-5"
-       cx="80.499481"
-       cy="232.24323"
-       r="3.5718751" />
-    <circle
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3716-3-3"
        cx="81.160934"
        cy="254.60051"
        r="8.598958" />
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.16110869;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.2758162;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4567"
-       width="26.826389"
-       height="14.655558"
-       x="31.698263"
-       y="228.42119" />
+       width="50.006248"
+       height="23.043156"
+       x="20.372917"
+       y="223.42143" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4569"
@@ -124,13 +106,6 @@
        cx="5.8208356"
        cy="291.44376"
        r="1.7197917" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect4595"
-       width="4.4979167"
-       height="4.4979167"
-       x="14.552083"
-       y="288.79791" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4600"
@@ -281,7 +256,7 @@
          id="tspan4706"
          x="1.8520833"
          y="246.2"
-         style="stroke-width:0.26458332px">R1/R2</tspan></text>
+         style="stroke-width:0.26458332px">Mode/Step</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -292,18 +267,18 @@
          id="tspan4710"
          x="2.6458333"
          y="269.48334"
-         style="stroke-width:0.26458332px">AG/Sq</tspan></text>
+         style="stroke-width:0.26458332px">Volume</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="69.849991"
+       x="72.495827"
        y="243.55417"
        id="text4716"><tspan
          sodipodi:role="line"
          id="tspan4714"
-         x="69.849991"
+         x="72.495827"
          y="243.55417"
-         style="stroke-width:0.26458332px">Tune/R3/Scan</tspan></text>
+         style="stroke-width:0.26458332px">Tune/Scan</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -314,7 +289,7 @@
          x="73.289581"
          y="267.36667"
          style="stroke-width:0.26458332px"
-         id="tspan4825">S1/Select</tspan></text>
+         id="tspan4825">System/Select</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -440,13 +415,13 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="93.199486"
-       y="253.80672"
+       y="252.21924"
        id="text4768"><tspan
          sodipodi:role="line"
          id="tspan4766"
          x="93.199486"
-         y="253.80672"
-         style="stroke-width:0.26458332px">*</tspan></text>
+         y="252.21924"
+         style="stroke-width:0.26458332px">*/./E</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -462,13 +437,13 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="109.40525"
-       y="253.47591"
+       y="251.35927"
        id="text4776"><tspan
          sodipodi:role="line"
          id="tspan4774"
          x="109.40525"
-         y="253.47591"
-         style="stroke-width:0.26458332px">#</tspan></text>
+         y="251.35927"
+         style="font-size:2.11666656px;stroke-width:0.26458332px">#/Ret/F</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -570,7 +545,7 @@
          id="tspan4833"
          x="27.516666"
          y="259.16458"
-         style="stroke-width:0.26458332px">TFT Screen</tspan></text>
+         style="stroke-width:0.26458332px">eInk Screen</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -578,10 +553,10 @@
        y="295.41251"
        id="text4839"><tspan
          sodipodi:role="line"
-         id="tspan4837"
          x="39.422916"
          y="295.41251"
-         style="stroke-width:0.26458332px">USB 3 A</tspan></text>
+         style="stroke-width:0.26458332px"
+         id="tspan129">USB A</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -592,23 +567,23 @@
          id="tspan4841"
          x="1.8520832"
          y="295.41251"
-         style="stroke-width:0.26458332px">⅛&quot; TRRS</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="14.552083"
-       y="288.79791"
-       id="text4847"><tspan
-         sodipodi:role="line"
-         id="tspan4845"
-         x="14.552083"
-         y="288.79791"
-         style="stroke-width:0.26458332px">RJ45</tspan></text>
+         style="stroke-width:0.26458332px">⅛&quot; TRS</tspan></text>
     <circle
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path3718-5-3"
-       cx="81.227081"
-       cy="255.19583"
-       r="3.5718753" />
+       id="path3716-3-36"
+       cx="82.285416"
+       cy="279.38177"
+       r="8.598958" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.30729175px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="74.877083"
+       y="292.61096"
+       id="text4712-7"><tspan
+         sodipodi:role="line"
+         id="tspan4710-5"
+         x="74.877083"
+         y="292.61096"
+         style="stroke-width:0.26458332px">Squelch</tspan></text>
   </g>
 </svg>
