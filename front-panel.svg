@@ -232,20 +232,6 @@
        height="6.0854168"
        x="117.4751"
        y="247.25824" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect4699"
-       width="11.1125"
-       height="3.96875"
-       x="133.34999"
-       y="225.5625" />
-    <rect
-       style="fill:#000000;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect4704"
-       width="1.0583333"
-       height="6.8791666"
-       x="138.37708"
-       y="220.53542" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -477,52 +463,41 @@
          x="117.4751"
          y="253.34366"
          style="stroke-width:0.26458332px">D</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="123.39514"
-       y="232.34239"
-       id="text4811"><tspan
-         sodipodi:role="line"
-         id="tspan4809"
-         x="123.39514"
-         y="232.34239"
-         style="stroke-width:0.26458332px">  Numeric/DTFM</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4813"
        width="6.0854168"
        height="6.0854168"
-       x="133.08542"
-       y="235.61667" />
+       x="135.20209"
+       y="225.82709" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="129.38124"
-       y="245.67084"
+       x="131.49791"
+       y="235.88126"
        id="text4817"><tspan
          sodipodi:role="line"
          id="tspan4815"
-         x="129.38124"
-         y="245.67084"
+         x="131.49791"
+         y="235.88126"
          style="stroke-width:0.26458332px">Function</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4819"
        width="6.614583"
        height="5.5562501"
-       x="132.82083"
-       y="249.11041" />
+       x="134.9375"
+       y="239.32083" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.30729151px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="129.11667"
-       y="260.22293"
+       x="131.23334"
+       y="250.43335"
        id="text4823"><tspan
          sodipodi:role="line"
          id="tspan4821"
-         x="129.11667"
-         y="260.22293"
+         x="131.23334"
+         y="250.43335"
          style="stroke-width:0.26458332px">Memory</tspan></text>
     <text
        xml:space="preserve"

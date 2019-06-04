@@ -55,7 +55,7 @@ SDR driver.
 
 ### Buttons/Switches
 
-* 4x4 SPST Momentary Keypad (0-9\*#ABCD)
+* 4x4 SPST Momentary Keypad (0-9\*#ABCD) (DTMF when PTT active)
 * DTSP Switch - Numeric vs DTMF pad
 * SPST Momentary Button - Function
 * SPST Momentary Button - Memory
