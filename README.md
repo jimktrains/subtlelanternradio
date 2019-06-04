@@ -79,39 +79,39 @@ All items relative to `/dev/slr/`.
 Service management is done through the init system and `inittab`
 
 * radios - All available radios
-* radios/<number> - specific radio (radios may expose additional settings as
+* radios/\<number\> - specific radio (radios may expose additional settings as
   files, e.g. bandwidth, oversampling, sample\_rate, if\_gain, &c)
-* radios/<number>/mode - mode for the radio / name of grc used
-* radios/<number>/attenuation - attenuation setting for the radio
-* radios/<number>/gain - gain setting for the radio in dB
-* radios/<number>/frequency - frequency the radio is set to, in Hz
-* radios/<number>/step - scanning step size, in Hz
-* radios/<number>/ranges - frequncy ranges this radio can tune to
-* radios/<number>/ranges/<number> - specific range
-* radios/<number>/ranges/<number>/min - minimal extent of range in Hz, inclusive
-* radios/<number>/ranges/<number>/max - maximal extent of range in Hz, inclusive
-* radios/<number>/iq - raw IQ data
+* radios/\<number\>/mode - mode for the radio / name of grc used
+* radios/\<number\>/attenuation - attenuation setting for the radio
+* radios/\<number\>/gain - gain setting for the radio in dB
+* radios/\<number\>/frequency - frequency the radio is set to, in Hz
+* radios/\<number\>/step - scanning step size, in Hz
+* radios/\<number\>/ranges - frequncy ranges this radio can tune to
+* radios/\<number\>/ranges/\<number\> - specific range
+* radios/\<number\>/ranges/\<number\>/min - minimal extent of range in Hz, inclusive
+* radios/\<number\>/ranges/\<number\>/max - maximal extent of range in Hz, inclusive
+* radios/\<number\>/iq - raw IQ data
 * nic - All available NICs
-* nic/<number> - specific NIC
-* nic/<number>/ipv4 - IPv4 settings
-* nic/<number>/ipv4/address - IPv4 address
-* nic/<number>/ipv4/subnet - IPv4 subnet
-* nic/<number>/ipv6 - IPv6 settings
-* nic/<number>/ipv6/address - IPv6 address
-* nic/<number>/ipv6/prefixlen- IPv6 prefix length
-* nic/<number>/mac - MAC address
+* nic/\<number\> - specific NIC
+* nic/\<number\>/ipv4 - IPv4 settings
+* nic/\<number\>/ipv4/address - IPv4 address
+* nic/\<number\>/ipv4/subnet - IPv4 subnet
+* nic/\<number\>/ipv6 - IPv6 settings
+* nic/\<number\>/ipv6/address - IPv6 address
+* nic/\<number\>/ipv6/prefixlen- IPv6 prefix length
+* nic/\<number\>/mac - MAC address
 * inputs - Inputs
 * inputs/selected\_radio - currently selected radio
-* inputs/<number> - Specific input
-* inputs/<number>/value - Value of the input
-* inputs/<number>/name - name of the input
-* inputs/<number>/type - type of input
+* inputs/\<number\> - Specific input
+* inputs/\<number\>/value - Value of the input
+* inputs/\<number\>/name - name of the input
+* inputs/\<number\>/type - type of input
 * sound - sound control
 * sound/volume - global volume
-* sound/<number> - specific device
-* sound/<number>/type - type of sound device
-* sound/<number>/volume - volume
-* sound/<number>/enabled - enabled
+* sound/\<number\> - specific device
+* sound/\<number\>/type - type of sound device
+* sound/\<number\>/volume - volume
+* sound/\<number\>/enabled - enabled
 
 #### Standard Inputs
 
@@ -137,7 +137,7 @@ If there are multiple radios, the following is also required.
 | Switch Radio          | KEY\_FORWARD, KEY\_BACK |
 
 
-The audo subsystem also announces events into it's own device (/dev/input/snd/<number>) with inputs types of `EV_SW`
+The audo subsystem also announces events into it's own device (/dev/input/snd/\<number\>) with inputs types of `EV_SW`
 
 | Description           | Event Code                         | Event Value                         |
 | --------------------- | ---------------------------------- | -----------                         |
