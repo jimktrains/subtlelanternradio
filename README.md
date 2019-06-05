@@ -75,11 +75,8 @@ system mode should be load and a frame for it to populate in the UI passed.
 * /etc/slr/memory/ - contains a file per memory slot
 * /usr/local/bin/slr/modes/ - contains the modes as executables (e.g. python gnuradio scripts) to display and use for rx and tx
 * /usr/local/bin/slr/system-menu/ - Modules for the system menu
-* /usr/local/bin/slr/system-menu/file\_output - UI for writing IQ and wav data to a file
-* /usr/local/bin/slr/system-menu/network\_output - UI for writing IQ and wav data to the network
 * /usr/local/bin/slr/system-menu/config - UI for configuring the base system
 * /usr/local/bin/slr/system-menu/packages - UI for packages management
-* /usr/local/bin/slr/system-menu/plots - UI for the Plots (e.g. waterfall, quadrature, frequency domain, time domain)
 * /usr/local/bin/slr/radio\_details - Default UI module for the radio details portion of the screen (e.g. frequency and modes) 
 * /usr/local/bin/slr/system\_menu - Container UI module for the system menu
 * /etc/slr/system-menu/ - contains the state of the system menu items; filenames same as the application
