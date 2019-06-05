@@ -54,30 +54,28 @@ inputs and blocks available.
 * ntpd
 * dhcpd
 * sshd with sftp
-* python3
+* python 3.7
   * alsaaudio
 * QT
 * GNU Radio
 * Apache 2.4
-  * Radio and SLR Documentation servered on port 80
+  * Radio and SLR Documentation served on port 80
 * nix Package Manager
-* an X server and a tiling window manager
-* some protocol for controlling a tiling window manager
-  * Maybe based on the i3 IPC protocol? https://i3wm.org/docs/ipc.html
+* an X server
+* iptables
 
 ### Filesystem Layout
 
-* /etc/slr/modes/grc/ - contains the modes to display and use for rx and tx as GNU Radio files
-* /etc/slr/modes/settings/ - contains the last settings for each mode
+* /etc/slr/modes/ - contains the last settings for each mode
 * /etc/slr/ui/ - contains the state of the UI
-* /etc/slr/memory/ - contains a file per memory slot
+* /etc/slr/memory/\<radio device name\>/ - contains a file per memory slot
+* /usr/local/bin/slr/modes/ - contains the modes as executables (e.g. python gnuradio scripts) to display and use for rx and tx
 * /usr/local/bin/slr/system-menu/ - Modules for the system menu
 * /usr/local/bin/slr/system-menu/file\_output - UI for writing IQ and wav data to a file
 * /usr/local/bin/slr/system-menu/network\_output - UI for writing IQ and wav data to the network
 * /usr/local/bin/slr/system-menu/config - UI for configuring the base system
 * /usr/local/bin/slr/system-menu/packages - UI for packages management
 * /usr/local/bin/slr/system-menu/plots - UI for the Plots (e.g. waterfall, quadrature, frequency domain, time domain)
-* /usr/local/bin/slr/ui - Default Root UI and event listener
 * /usr/local/bin/slr/radio\_details - Default UI module for the radio details portion of the screen (e.g. frequency and modes) 
 * /usr/local/bin/slr/system\_menu - Container UI module for the system menu
 * /etc/slr/system-menu/ - contains the state of the system menu items; filenames same as the application
@@ -88,20 +86,29 @@ Along with the normal place to place config files for certain applications or th
 * /etc/network/interfaces - network interface configruation
 * /usr/share/gnuradio/grc/blocks/ - blocks available to gnu radio
 * /etc/apache24/ - apache configs
+* /etc/X11/default-display-manager - references the main UI
 
 ### Control API
 
 Service management is done through the init system and `inittab`.
 
-Radios should be able to be configured via `sysfs` and raw data
-accessible via `devfs`.
-
 Sound is controlled via ALSA.
+
+Radios should be able to be configured via `sysfs` and raw data
+accessible via `devfs`. I'd envision that all settings for the radio could
+be read or set by reading or writing to a file for the device in `sysfs`.
+
 
 ### Standard Inputs
 
-Inputs should appear as a keyboard with an input type of `EV_KEY` (except for volume, which uses `EV_ABS`) and an
-event code from `input-event-codes.h`.
+Essentially, the frontpanel should appear as a keyboard and there would be
+pre-defined keycodes for standard required and standard optional buttons,
+knobs, &c. Implementors are free to add non-standard keys and assign them an
+otherwise unused keycode. I'm probably a little premature with the list below,
+but it's a conversation starter.
+
+Inputs should appear as a keyboard with an input type of `EV_KEY` (except for
+volume, which uses `EV_ABS`) and an event code from `input-event-codes.h`.
 
 | Description           | Event Code                         |
 | --------------------- | ---------------------------------- |
@@ -210,7 +217,7 @@ SDR driver.
 * FreeDV
 * FT8
 * PSK31
-* RTTY 45.45 / 170Hz
+* RTTY 45.45baud / 170Hz
 
 ## System Modes
 
@@ -247,4 +254,3 @@ SDR driver.
   * init
   * ntp
 * OpenSSH
-* i3 with i3-msg for controll
