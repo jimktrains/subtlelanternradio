@@ -1,13 +1,10 @@
 # Subtle Lantern Radio
 
-Showing the way forward.
+_Lighting the way forward._
 
-This is a project to develop an open, libre standalone radio. 
-
-Initially a desktop model, but eventually a portable/HT model as well.
-
-The desktop/mobile model (_The Crossing Watchman_) is made being designed with batter-powered operation in
-mind (_The Switchman_).
+This is a project to develop an open, libre standard for radios to use allowing
+for extensibility, configurability, control, and experimentation by the
+operator.
 
 What's presented here is a baseline for the initial version.
 
@@ -64,11 +61,18 @@ inputs and blocks available.
 * an X server
 * iptables
 
+### UI
+
+The UI will consist of an application capable of loading python modules and
+passing QT Frames to the module. It should also read the radio modes and system
+modes to present from the file system. When selected, the appropriate radio or
+system mode should be load and a frame for it to populate in the UI passed.
+
 ### Filesystem Layout
 
 * /etc/slr/modes/ - contains the last settings for each mode
 * /etc/slr/ui/ - contains the state of the UI
-* /etc/slr/memory/\<radio device name\>/ - contains a file per memory slot
+* /etc/slr/memory/ - contains a file per memory slot
 * /usr/local/bin/slr/modes/ - contains the modes as executables (e.g. python gnuradio scripts) to display and use for rx and tx
 * /usr/local/bin/slr/system-menu/ - Modules for the system menu
 * /usr/local/bin/slr/system-menu/file\_output - UI for writing IQ and wav data to a file
@@ -95,8 +99,9 @@ Service management is done through the init system and `inittab`.
 Sound is controlled via ALSA.
 
 Radios should be able to be configured via `sysfs` and raw data
-accessible via `devfs`. I'd envision that all settings for the radio could
-be read or set by reading or writing to a file for the device in `sysfs`.
+accessible via `devfs`. I'd envision that all settings and parameters for the
+radio could be read or set by reading or writing to a file for the device in
+`sysfs`.
 
 
 ### Standard Inputs
@@ -135,122 +140,3 @@ If there are multiple radios, the following is also required.
 | 4x4 Numpad            | KEY\_NUMERIC\_0-9\*#ABCD           |
 | Function              | KEY\_LEFTSHIFT                     |
 | Memory                | KEY\_MEMO                          |
-
-### Future Work
-
-It might be useful to bring GNU Radio fully or partially into the kernel
-to reduce the amount of copying in and out of kernel memory. We'll have to
-see if this becomes a bottleneck or not before considering it furter.
-
-## _The Crossing Watchman_ Mobile Radio
-
-### Radio
-
-For the first revision, a commercial SDR (e.g. HackRF or LimeSDR) will be
-used as the transceiver.
-
-### System-on-a-Chip
-
-For the first revision, a commercial System-on-a-Chip supporting Linux
-(e.g. Raspberry-Pi or ODROID) will run the control software, GNU Radio, and 
-SDR driver.
-
-## Front Panel
-
-### Horrible Sketch
-
-![Horrible Sketch](./front-panel.png)
-
-### Displays
-
-* ~5" Transflective Display
-  * Low Power + Visible in Sunlight
-  * Fast Refresh
-  * Hard to find?
-
-### Audio
-
-* ⅛" Headphone Jack
-* ⅛" Microphone Jack
-
-### Digital
-
-* 2 USB-A jacks
-
-### Buttons/Switches
-
-* 4x4 SPST Momentary Keypad (0-9\*#ABCD) (DTMF when PTT active)
-* SPST Momentary Button - Function
-* SPST Momentary Button - Memory
-
-### Knobs
-
-* Knob w/ detentes w/ button
-  * Radio Primary Function / Step-Size or Memory
-  * System Function / Select
-  * Tune / Scan
-* Knob w/o detentes w/ button
-  * Audio Gain (Volume) / Squelch
-
-## Back panel
-
-* Antenna 
-  * 2? (SMA or PL259)? connectors
-* Digital
-  * 2x Ethernet (part of a 3 port switch; last port goes to device)
-
-## Radio Modes
-
-### Configurable
-
-### Extendible
-
-* Modes should be flows that can be loaded into gnuradio.
-
-#### Radio Modes
-
-* CW
-* AM
-* USB
-* LSB
-* FM
-* FreeDV
-* FT8
-* PSK31
-* RTTY 45.45baud / 170Hz
-
-## System Modes
-
-* Write Raw Data to USB device
-  * IQ Data (WAV format, stereo L=I R=Q)
-  * Audio Data (WAV format, stereo L=Rx R=Tx)
-* Write to network
-  * Stream IQ (multicast/destination:port)
-  * Stream Audio (multicast/destination:port)
-  * Stream Data (multicast/destination:port)
-* Config
-  * Ethernet
-  * Services
-  * Load SSH authorized\_keys from USB drive
-  * Enable NTP
-  * Sync time from GPS
-* Attenuation
-  * Amount
-* Power Output
-  * Amount
-* Packages 
-  * Install nix package
-* Date/Time
-* Display
-  * Enable Constellations
-  * Enable Freq Domain
-  * Enable Histogram
-  * Enable Time Domain
-  * Enable Waterfall
-
-## Environment
-
-* BusyBox
-  * init
-  * ntp
-* OpenSSH
