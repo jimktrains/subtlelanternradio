@@ -55,9 +55,13 @@ inputs and blocks available.
 * dhcpd
 * sshd with sftp
 * python3
+  * alsaaudio
 * QT
 * GNU Radio
+* Apache 2.4
+  * Radio and SLR Documentation servered on port 80
 * nix Package Manager
+* an X server and a tiling window manager
 * some protocol for controlling a tiling window manager
   * Maybe based on the i3 IPC protocol? https://i3wm.org/docs/ipc.html
 
@@ -67,7 +71,15 @@ inputs and blocks available.
 * /etc/slr/modes/settings/ - contains the last settings for each mode
 * /etc/slr/ui/ - contains the state of the UI
 * /etc/slr/memory/ - contains a file per memory slot
-* /usr/local/bin/slr/system-menu/ - Applications to run when selected by the system menu
+* /usr/local/bin/slr/system-menu/ - Modules for the system menu
+* /usr/local/bin/slr/system-menu/file\_output - UI for writing IQ and wav data to a file
+* /usr/local/bin/slr/system-menu/network\_output - UI for writing IQ and wav data to the network
+* /usr/local/bin/slr/system-menu/config - UI for configuring the base system
+* /usr/local/bin/slr/system-menu/packages - UI for packages management
+* /usr/local/bin/slr/system-menu/plots - UI for the Plots (e.g. waterfall, quadrature, frequency domain, time domain)
+* /usr/local/bin/slr/ui - Default Root UI and event listener
+* /usr/local/bin/slr/radio\_details - Default UI module for the radio details portion of the screen (e.g. frequency and modes) 
+* /usr/local/bin/slr/system\_menu - Container UI module for the system menu
 * /etc/slr/system-menu/ - contains the state of the system menu items; filenames same as the application
 
 Along with the normal place to place config files for certain applications or the kernel, e.g.
@@ -75,34 +87,18 @@ Along with the normal place to place config files for certain applications or th
 * /home/slr/.ssh/authorized\_keys - ssh authorized keys
 * /etc/network/interfaces - network interface configruation
 * /usr/share/gnuradio/grc/blocks/ - blocks available to gnu radio
+* /etc/apache24/ - apache configs
 
 ### Control API
 
+Service management is done through the init system and `inittab`.
 
-Service management is done through the init system and `inittab`. This
-probably needs to be thought over a little more? There may already be a 
-device class that can handle this.
+Radios should be able to be configured via `sysfs` and raw data
+accessible via `devfs`.
 
-These should appear in the `/sys/class/` filesystem.
+Sound is controlled via ALSA.
 
-* radios - All available radios
-* radios/\<number\> - specific radio (radios may expose additional settings as
-  files, e.g. bandwidth, oversampling, sample\_rate, if\_gain, &c)
-* radios/\<number\>/mode - mode for the radio / name of grc used
-* radios/\<number\>/attenuation - attenuation setting for the radio
-* radios/\<number\>/gain - gain setting for the radio in dB
-* radios/\<number\>/frequency - frequency the radio is set to, in Hz
-* radios/\<number\>/step - scanning step size, in Hz
-* radios/\<number\>/ranges - frequency ranges this radio can tune to
-* radios/\<number\>/ranges/\<number\> - specific range
-* radios/\<number\>/ranges/\<number\>/min - minimal extent of range in Hz, inclusive
-* radios/\<number\>/ranges/\<number\>/max - maximal extent of range in Hz, inclusive
-
-These should appear in the `/dev/` filesystem
-
-* radios/\<number\>/iq - raw IQ data
-
-#### Standard Inputs
+### Standard Inputs
 
 Inputs should appear as a keyboard with an input type of `EV_KEY` (except for volume, which uses `EV_ABS`) and an
 event code from `input-event-codes.h`.
@@ -133,10 +129,11 @@ If there are multiple radios, the following is also required.
 | Function              | KEY\_LEFTSHIFT                     |
 | Memory                | KEY\_MEMO                          |
 
-#### Sound
+### Future Work
 
-Sound is controlled via ALSA.
-
+It might be useful to bring GNU Radio fully or partially into the kernel
+to reduce the amount of copying in and out of kernel memory. We'll have to
+see if this becomes a bottleneck or not before considering it furter.
 
 ## _The Crossing Watchman_ Mobile Radio
 
@@ -220,22 +217,23 @@ SDR driver.
 * Write Raw Data to USB device
   * IQ Data (WAV format, stereo L=I R=Q)
   * Audio Data (WAV format, stereo L=Rx R=Tx)
-* Ethernet
-  * DHCP/Static (IP/Subnet)
+* Write to network
   * Stream IQ (multicast/destination:port)
   * Stream Audio (multicast/destination:port)
   * Stream Data (multicast/destination:port)
-  * Enable SSH/SFTP
+* Config
+  * Ethernet
+  * Services
   * Load SSH authorized\_keys from USB drive
+  * Enable NTP
+  * Sync time from GPS
 * Attenuation
   * Amount
 * Power Output
   * Amount
-* Software Updates
+* Packages 
   * Install nix package
 * Date/Time
-  * Enable NTP
-  * Sync from GPS
 * Display
   * Enable Constellations
   * Enable Freq Domain
