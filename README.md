@@ -189,7 +189,7 @@ installed:
 
     * Repeat back "transmitted" I/Q sequences after a delay
     * Adjustably adding noise to received data
-    * Audio modes (e.g. AM and FM) couldencode predictable data, e.g.
+    * Audio modes (e.g. AM and FM) could encode predictable data, e.g.
       current time or settings via DTMF or TTS
     * Data modes (e.g. AFSK1200, PSK31) could encode predictable data,
       e.g. current time or settings
