@@ -26,7 +26,7 @@ not to mention competing on the price or quality the radio hardware.
     * Must provide a serial console
 * Linux Kernel
 * `slr` user
-    * Password should be unique per device
+    * Initial password must be unique per device
 * `inittab` service startup
 * Bourne Shell (perhaps via busybox)
 * TCL/TK
@@ -49,7 +49,7 @@ not to mention competing on the price or quality the radio hardware.
 
 ### USB
 
-The following should be provided via USB when connected:
+The following must be provided via USB when connected:
 
 * A serial console with baud=115200 databits=8 parity=no stop=1
 * USB mass storage class devices exposing all storage partitions
@@ -75,7 +75,8 @@ should be described in the manual.
 ### Recovery
 
 If a recovery partition is provided, there must be a means of
-  reflashing the main partition an radio firmware via:
+reflashing the main partition an radio firmware via:
+
       * bootloader/UEFI via the serial console and must not require network access.
       * hardware button held on startup
 
@@ -96,7 +97,9 @@ If an Ethernet or WiFi is provided, the following software must be
 installed:
 
 * ntpd
-* dhcpd
+    * pools would have to be thought of. Perhaps SLR could apply for
+      one.
+* dhcpd (client)
 * sshd with sftp
 * iptables
 * Apache 2.4
@@ -150,7 +153,7 @@ installed:
               * freq
           * model
           * serial_number
-
+  
 ## Hardware
 
 * USB-C or Micro-USB port
