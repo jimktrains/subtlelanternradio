@@ -186,12 +186,13 @@ installed:
   against. I'd image leveraging a seperate GNU Radio instance or other
   external programs for much of this, especially the I/Q encoding. For
   instance,
-      * Repeat back "transmitted" I/Q sequences after a delay
-      * Adjustably adding noise to received data
-      * Audio modes (e.g. AM and FM) couldencode predictable data, e.g.
-        current time or settings via DTMF or TTS
-      * Data modes (e.g. AFSK1200, PSK31) could encode predictable data,
-        e.g. current time or settings
+
+    * Repeat back "transmitted" I/Q sequences after a delay
+    * Adjustably adding noise to received data
+    * Audio modes (e.g. AM and FM) couldencode predictable data, e.g.
+      current time or settings via DTMF or TTS
+    * Data modes (e.g. AFSK1200, PSK31) could encode predictable data,
+      e.g. current time or settings
 
 * Become very familar with ALSA (and maybe JACK) and how to configure
   them.
