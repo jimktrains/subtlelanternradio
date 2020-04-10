@@ -100,14 +100,14 @@ This includes low-res pixel-addressable displays.
 If an Ethernet or WiFi is provided, the following software must be
 installed:
 
-* ntpd
-    * pools would have to be thought of. Perhaps SLR could apply for
-      one.
-* dhcpd (client)
+* NTP Client
+* DHCP Client
 * sshd with sftp
 * iptables
-* Apache 2.4
-    * Radio and SLR Documentation served on port 80
+* Web Server on port 80
+    * should default to only allow connections from the local network
+    * Radio Documentation
+    * SLR Documentation
 
 ### Examples
 
