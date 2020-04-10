@@ -2,138 +2,157 @@
 
 _Lighting the way forward._
 
-This is a project to develop an open, libre standard for radios to use allowing
-for extensibility, configurability, control, and experimentation by the
-operator.
+This is a project to develop an open, libre standard for radios to use
+allowing for extensibility, configurability, control, and
+experimentation by the operator.
 
 What's presented here is a baseline for the initial version.
 
-## Software to Standardize
 
-The Standard Software should allow radios of different makes and models to
-easily share software and allow users to add new functionality. Ideally this
-would become a standardized document and multiple vendors would support it.
-This would be considered a minimal implementation. Vendors may have additional
-inputs and blocks available.
+The Standard Software should allow radios of different makes and models
+to easily share software and allow users to add new functionality.
+Vendors should feel welcomed to provide and compete on, among other
+things:
 
-### Input GNU Radio Blocks
+* hardware-backed GNU Radio blocks
+* user interface design (provided that the user is able to replace it)
+* features
 
-* slr\_var\_frequency
-* slr\_var\_volume
-* slr\_input\_numeric
-* slr\_input\_radiobutton
-* slr\_input\_checkbox
-* slr\_input\_text
-* slr\_radio\_source
-* slr\_iq\_source
-* slr\_audio\_source
-* slr\_text\_source
+not to mention competing on the price or quality the radio hardware.
 
-### Output GNU Radio Blocks
+## Software
 
-* slr\_gui\_constellation\_sink
-* slr\_gui\_freq\_domain\_sink
-* slr\_gui\_time\_domain\_sink
-* slr\_gui\_histo\_sink
-* slr\_gui\_scope\_sink
-* slr\_gui\_waterfall\_sink
-* slr\_radio\_sink
-* slr\_iq\_sink
-* slr\_audio\_sink
-* slr\_text\_sink
-
-### Environment
-
+* UEFI bootloader
+    * Must provide a serial console
 * Linux Kernel
 * `slr` user
+    * Password should be unique per device
 * `inittab` service startup
-* Bourne Shell
+* Bourne Shell (perhaps via busybox)
+* TCL/TK
+* GNU Radio, latest stable
+    * python, latest stable also compatible with GNU Radio
+* nix Package Manager
+* All input should appear and be processable through devfs/kernel "input
+  protocol" (e.g. `/dev/input/eventX`)
+* Manual must be available on disk
+    * A text-only version, along side a traditional PDF, would be greatly
+     appreciated.
+* All radio functions must be controllable via devfs or sysfs and
+  documented in the manual.
+* Kernel drivers must be free/libre software.
+    * The radio hardware itself may have closed-source firmware, but the
+      control system must be able to talk to that hardware via open
+      software.
+    * Closed-source software may be provided as applications, e.g. the user
+      interface.
+
+### USB
+
+The following should be provided via USB when connected:
+
+* A serial console with baud=115200 databits=8 parity=no stop=1
+* USB mass storage class devices exposing all storage partitions
+   * The main partition must be writable
+   * Read-only recovery partitions may be provided
+* A 8-bit 44.1k PCM audio output terminal channel per receiver
+* A 8-bit 44.1k PCM audio input terminal channel per transmitter
+
+Additional serial parameters may be provided at the vendors digression.
+These parameters must be accessible and discernible via the device
+descriptor.
+
+Additional audio channels formats may be provided at the vendors
+digression. These channels must be accessible and discernible via the
+device descriptor.
+
+Data channels (e.g. I/Q data streamed over 2 channels, "s-meter" over 1
+channel) may be provided at the vendors digression as an appropriate USB
+Device class or as a serial console stream. These channels must be
+accessible and discernible via the device descriptor. Format details
+should be described in the manual.
+
+### Recovery
+
+If a recovery partition is provided, there must be a means of
+  reflashing the main partition an radio firmware via:
+      * bootloader/UEFI via the serial console and must not require network access.
+      * hardware button held on startup
+
+If a recovery partition is not provided, some form or removable storage
+which can boot the system must be present. This may include a USB-A port
+that will be booted from when a button is held at start up.
+
+### Display
+
+If a textual display is provided it must be exposed as a devfs device. 
+
+If a graphical display is provided an X11 server should be provided.
+This includes low-res pixel-addressable displays.
+
+### Networking
+
+If an Ethernet or WiFi is provided, the following software must be
+installed:
+
 * ntpd
 * dhcpd
 * sshd with sftp
-* python 3.7
-  * alsaaudio
-* QT
-* GNU Radio
-* Apache 2.4
-  * Radio and SLR Documentation served on port 80
-* nix Package Manager
-* an X server
 * iptables
+* Apache 2.4
+    * Radio and SLR Documentation served on port 80
 
-### UI
+### Examples
 
-The UI will consist of an application capable of loading python modules and
-passing QT Frames to the module. It should also read the radio modes and system
-modes to present from the file system. When selected, the appropriate radio or
-system mode should be load and a frame for it to populate in the UI passed.
+#### Sysfs Config
 
-### Filesystem Layout
+**TODO:** Perhaps spec out what should be the minimal standard here?
 
-* /etc/slr/modes/ - contains the last settings for each mode
-* /etc/slr/ui/ - contains the state of the UI
-* /etc/slr/memory/ - contains a file per memory slot
-* /usr/local/bin/slr/modes/ - contains the modes as executables (e.g. python gnuradio scripts) to display and use for rx and tx
-* /usr/local/bin/slr/system-menu/ - Modules for the system menu
-* /usr/local/bin/slr/system-menu/config - UI for configuring the base system
-* /usr/local/bin/slr/system-menu/packages - UI for packages management
-* /usr/local/bin/slr/radio\_details - Default UI module for the radio details portion of the screen (e.g. frequency and modes) 
-* /usr/local/bin/slr/system\_menu - Container UI module for the system menu
-* /etc/slr/system-menu/ - contains the state of the system menu items; filenames same as the application
+* /sys/devices/radios/
+   * case
+       * 0
+          * model
+          * serial_number
+   * rx
+       * 0
+          * frequency - frequency in Hertz
+          * squelch - 0-100
+          * mode - one of the available modes
+          * available_modes - new line delimeted list of modes, e.g. CW,
+            AM, FM, USB, LSB, MT63-2000L, Olivia-8-500, FreeDV-700D
+          * output_device - file (inclduing named pipes and devfs
+            devices) to route decoded audio or data to
+          * tone
+              * type - tone type, if used otherwise empty, e.g. CTCSS, DCS, DTSS
+              * freq - tone frequencyes, e.g. 131.8
+          * model
+          * serial_number
+       * 1
+          * frequency
+          * power
+          * mode
+          * available_modes
+          * input_device
+          * tone
+              * type
+              * freq
+          * model
+          * serial_number
+   * tx
+       * 0
+          * frequency
+          * power
+          * mode
+          * available_modes
+          * input_device
+          * tone
+              * type
+              * freq
+          * model
+          * serial_number
 
-Along with the normal place to place config files for certain applications or the kernel, e.g.
+## Hardware
 
-* /home/slr/.ssh/authorized\_keys - ssh authorized keys
-* /etc/network/interfaces - network interface configruation
-* /usr/share/gnuradio/grc/blocks/ - blocks available to gnu radio
-* /etc/apache24/ - apache configs
-* /etc/X11/default-display-manager - references the main UI
-
-### Control API
-
-Service management is done through the init system and `inittab`.
-
-Sound is controlled via ALSA.
-
-Radios should be able to be configured via `sysfs` and raw data
-accessible via `devfs`. I'd envision that all settings and parameters for the
-radio could be read or set by reading or writing to a file for the device in
-`sysfs`.
-
-
-### Standard Inputs
-
-Essentially, the frontpanel should appear as a keyboard and there would be
-pre-defined keycodes for standard required and standard optional buttons,
-knobs, &c. Implementors are free to add non-standard keys and assign them an
-otherwise unused keycode. I'm probably a little premature with the list below,
-but it's a conversation starter.
-
-Inputs should appear as a keyboard with an input type of `EV_KEY` (except for
-volume, which uses `EV_ABS`) and an event code from `input-event-codes.h`.
-
-| Description           | Event Code                         |
-| --------------------- | ---------------------------------- |
-| Radio Primary Mode    | KEY\_SCROLLDOWN, KEY\_SCROLLUP     |
-| Step Size             | KEY\_ZOOMIN, KEY\_ZOOMOUT          |
-| System Function       | KEY\_PAGEUP, KEY\_PAGEDOWN         |
-| Select                | KEY\_ENTER                         |
-| Tuner                 | KEY\_CHANNELUP, KEY\_CHANNELDOWN   |
-| Momentary scan        | KEY\_PLAY                          |
-| Scan                  | KEY\_PREVIOUSSONG, KEY\_NEXTSONG   |
-| Hold                  | KEY\_PAUSE                         |
-| Volume                | ABS\_VOLUME                        |
-
-If there are multiple radios, the following is also required.
-
-| Description           | Event Code              |
-| --------------------- | ----------              |
-| Switch Radio          | KEY\_FORWARD, KEY\_BACK |
-
-#### Optional Inputs
-
-| Description           | Event Code
-| --------------------- | ---------------------------------- |
-| 4x4 Numpad            | KEY\_NUMERIC\_0-9\*#ABCD           |
-| Function              | KEY\_LEFTSHIFT                     |
-| Memory                | KEY\_MEMO                          |
+* USB-C or Micro-USB port
+   * If the device has a battery, the USB port should be capable of
+     charging the device.
