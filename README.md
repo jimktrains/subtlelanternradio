@@ -80,13 +80,11 @@ should be described in the manual.
 
 If a recovery partition is provided, there must be a means of
 reflashing the main partition an radio firmware via:
-
     * bootloader/UEFI via the serial console and must not require network access.
     * hardware button held on startup
-
 If a recovery partition is not provided, some form or removable storage
 which can boot the system must be present. This may include a USB-A port
-that will be booted from when a button is held at start up.
+that can be booted from.
 
 ### Display
 
