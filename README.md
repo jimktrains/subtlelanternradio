@@ -45,7 +45,7 @@ not to mention competing on the price or quality the radio hardware.
       control system must be able to talk to that hardware via open
       software.
     * Closed-source software may be provided as applications, e.g. the user
-      interface.
+      interface, so long as they are not required to use the radio.
 
 ### USB
 
