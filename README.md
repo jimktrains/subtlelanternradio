@@ -127,7 +127,7 @@ installed:
             devices) to route decoded audio or data to
           * tone
               * type - tone type, if used otherwise empty, e.g. CTCSS, DCS, DTSS
-              * freq - tone frequencyes, e.g. 131.8
+              * freq - tone frequency, e.g. 131.8
           * model
           * serial_number
        * 1
