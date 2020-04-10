@@ -22,22 +22,16 @@ not to mention competing on the price or quality the radio hardware.
 
 ## Software
 
-* UEFI bootloader
-    * Must provide a serial console
 * Linux Kernel
-* `slr` user
-    * Initial password must be unique per device
 * `inittab` service startup
 * Bourne Shell (perhaps via busybox)
 * TCL/TK
 * GNU Radio, latest stable
     * python, latest stable also compatible with GNU Radio
 * nix Package Manager
-* All input should appear and be processable through devfs/kernel "input
-  protocol" (e.g. `/dev/input/eventX`)
-* Manual must be available on disk
-    * A text-only version, along side a traditional PDF, would be greatly
-     appreciated.
+* All user input should appear and be processable through devfs/kernel "input
+  protocol" (e.g. `/dev/input/eventX`). The mapping of physical device to event
+  should be contained in the manual.
 * All radio functions must be controllable via devfs or sysfs and
   documented in the manual.
 * Kernel drivers must be free/libre software.
@@ -47,9 +41,17 @@ not to mention competing on the price or quality the radio hardware.
     * Closed-source software may be provided as applications, e.g. the user
       interface, so long as they are not required to use the radio.
 
+### Environment
+
+* `slr` user
+    * Initial password must be unique per device
+* Manual must be available on disk
+    * A text-only version, along side a traditional PDF, would be greatly
+     appreciated.
+
 ### USB
 
-The following must be provided via USB when connected:
+The following must be able to be provided via USB when connected:
 
 * A serial console with baud=115200 databits=8 parity=no stop=1
 * USB mass storage class devices exposing all storage partitions
