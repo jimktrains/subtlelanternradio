@@ -2,7 +2,7 @@
 
 _Lighting the way forward._
 
-This is a project to develop an open, libre standard for radios to use
+This is a project to develop an open, libre standard for radios to use,
 allowing for extensibility, configurability, control, and
 experimentation by the operator.
 
@@ -17,10 +17,12 @@ things:
 * hardware-backed GNU Radio blocks
 * user interface design (provided that the user is able to replace it)
 * features
+* performance
+* the radio hardware itself
 
 not to mention competing on the price or quality the radio hardware.
 
-## Software
+## Minimal Required Software
 
 * Linux Kernel
 * `inittab` service startup
@@ -32,7 +34,7 @@ not to mention competing on the price or quality the radio hardware.
 * All user input should appear and be processable through devfs/kernel "input
   protocol" (e.g. `/dev/input/eventX`). The mapping of physical device to event
   should be contained in the manual.
-* All radio functions must be controllable via devfs or sysfs and
+* All radio functions must be controllable via devfs or devfs and
   documented in the manual.
 * Kernel drivers must be free/libre software.
     * The radio hardware itself may have closed-source firmware, but the
@@ -109,7 +111,7 @@ installed:
 
 ### Examples
 
-#### Sysfs Config
+#### devfs Config
 
 **TODO:** Perhaps spec out what should be the minimal standard here?
 
@@ -156,8 +158,67 @@ installed:
           * model
           * serial_number
   
-## Hardware
+## Minimal Required Hardware
 
 * USB-C or Micro-USB port
    * If the device has a battery, the USB port should be capable of
      charging the device.
+
+## Possible Path Forward
+
+* Build a minimal Ubuntu System image
+      * Python
+      * ncurses
+      * JACK
+        * ALSA
+      * GNU Radio
+
+* Build a Fauxdio (faux radio) driver
+
+  I'd like to test the rest of the system without having to deal with a
+  real device just yet.
+
+  https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os may
+  be a good starting point
+
+  The Fauxdio should provide data to build the rest of the system
+  against. I'd image leveraging a seperate GNU Radio instance or other
+  external programs for much of this, especially the I/Q encoding. For
+  instance,
+      * Repeat back "transmitted" I/Q sequences after a delay
+      * Adjustably adding noise to received data
+      * Audio modes (e.g. AM and FM) couldencode predictable data, e.g.
+        current time or settings via DTMF or TTS
+      * Data modes (e.g. AFSK1200, PSK31) could encode predictable data,
+        e.g. current time or settings
+
+* Become very familar with ALSA (and maybe JACK) and how to configure
+  them.
+
+* Build out a minimal TUI 
+    * Use the keyboard as input
+    * Strive to use only a minimal subset of keys, such as would be
+      found on a radio in order to think more about the UI.
+        * W,S - Volume
+        * R,F - Squelch
+        * Enter - Enter/misc button
+        * 0-9ABCD - 16-key keypad
+        * ZXCV - Misc buttons
+
+* Get this working on a SBC
+    * Board Requiremens
+        * At least 1 USB Device port
+        * At least 1 USB Host port
+        * Must be able to run Debain
+    * Possible options
+        * ODROID-C1+
+
+* Work on the USB Device requirements.
+    * http://www.linux-usb.org/gadget/
+    * http://www.staroceans.org/kernel-and-driver/Programming%20Guide%20for%20Linux%20USB%20device%20drivers.pdf
+    * https://www.kernel.org/doc/html/v4.13/driver-api/usb/writing\_usb\_driver.html
+
+* Obtain and get working with the UI and sensible devfs endpoints a
+  HackRF or LimeSDR (or my TM-V7 if its data port isn't busted) (or even
+  an RTL-SDR for an RX-only radio, but it'd give I/Q data and the TM-V7
+  won't)
